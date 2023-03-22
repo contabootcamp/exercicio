@@ -22,7 +22,7 @@ sub fechar_janela {
 my $window = Gtk3::Window->new('toplevel');
 $window->set_title('Calcular IMC');
 $window->set_position('center');
-$window->set_default_size(800, 50);
+$window->set_default_size(300, 50);
 
 my $botao_fechar = Gtk3::Button->new_with_label("Fechar");
 $botao_fechar->signal_connect("clicked", \&fechar_janela, undef);
