@@ -40,27 +40,15 @@ my $imc = $peso / ($altura * $altura);
 # >= 40.0 obesidade 3
 
 if($imc < 18.5) {
-    print "Seu IMC é considerado: Abaixo do peso";
+    $resultado_label->set_text("Seu IMC é considerado: Abaixo do peso");
 } elsif($imc >= 18.5 and $imc <= 24.9) {
-    print "Seu IMC é considerado: peso normal";
+    $resultado_label->set_text("Seu IMC é considerado: peso normal");
 } elsif($imc >= 30.0 and $imc <= 34.9) {
-    print "Seu IMC é considerado: Obesidade Grau I";
+    $resultado_label->set_text("Seu IMC é considerado: Obesidade Grau I");
 } elsif($imc >= 35.0 and $imc <= 39.9) {
-    print "Seu IMC é considerado: Obesidade Grau II";
+    $resultado_label->set_text("Seu IMC é considerado: Obesidade Grau II");
 } else {
-    print "Seu IMC é considerado: Obesidade Grau III";
-}
-
-if($imc < 18.5) {
-    $resultado_label->set_text(decode('utf8', "Seu IMC é considerado: Abaixo do peso"));
-} elsif($imc >= 18.5 and $imc <= 24.9) {
-    $resultado_label->set_text(decode('utf8', "Seu IMC é considerado: peso normal"));
-} elsif($imc >= 30.0 and $imc <= 34.9) {
-    $resultado_label->set_text(decode('utf8',"Seu IMC é considerado: Obesidade Grau I"));
-} elsif($imc >= 35.0 and $imc <= 39.9) {
-    $resultado_label->set_text(decode('utf8',"Seu IMC é considerado: Obesidade Grau II"));
-} else {
-    $resultado_label->set_text(decode('utf8',"Seu IMC é considerado: Obesidade Grau III"));
+    $resultado_label->set_text("Seu IMC é considerado: Obesidade Grau III");
 }
 
 # Inicia a tela grafica
