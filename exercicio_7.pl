@@ -2,6 +2,9 @@
 use strict;
 use warnings;
 
+# Para usar no fechar janela
+use Glib qw/TRUE FALSE/;
+
 # Biblioteca GTK (interface grafica)
 use Gtk3 -init;
 
@@ -20,6 +23,9 @@ my $window = Gtk3::Window->new('toplevel');
 $window->set_title('Calcular IMC');
 $window->set_position('center');
 $window->set_default_size(800, 50);
+
+my $botao_fechar = Gtk3::Button->new_with_label("Fechar");
+$botao_fechar->signal_connect("clicked", \&fechar_janela, undef);
 
 # https://github.com/kevinphilp/Perl-gtk3-Tutorial/blob/master/6a-Checkbox-Basics.pl
 # Exemplo retirado de um trecho do codigo do programador Kevin Philip
